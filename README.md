@@ -15,6 +15,7 @@
   * www.slack.com
   * Create a slack account.
   * We will use this for communications between the group outside of work hours. Hell, even during.
+  * https://join.slack.com/t/191118javaext/shared_invite/enQtODQxMTU0Nzk3Njg2LWY2ODgxNjE0NTI5NjFlNDEwYjNiODdhMTE1ODYyMjI1MmVhMzYwOGZiYzU4OTYzNzM0YWFmMGQ1ZDkyNzViYmE
 * **AT THIS POINT USE SLACK AND MESSAGE ME THE FOLLOWING**
   * GitHub username
 * [GIT](https://git-scm.com/downloads)
