@@ -84,6 +84,8 @@ public class Driver {
 		// What this means, is that when d is no longer
 		// within scope, the new Driver still exists
 		// Even though we do not have access to it.
+		
+		System.gc();
 	}
 
 }
