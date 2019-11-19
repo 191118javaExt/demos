@@ -4,13 +4,13 @@ public class Driver {
 
 	public static void main(String[] args) {
 		// When objects are created, they are stored
-		// on what is called the stack
+		// on what is called the heap
 		
 		// When local variables (block or method scope primitives)
 		// are declared, they are stored on
-		// what is called the heap
+		// what is called the stack
 		
-		// There is 1 stack shared for the entire program
+		// There is 1 heap shared for the entire program
 		// There is more detail here that we will discuss
 		// later
 		
@@ -68,8 +68,8 @@ public class Driver {
 	
 	static void otherMethod() {
 		// We create a new instance of the Driver class
-		// This object is stored on the stack
-		// And the variable d is stored on the heap
+		// This object is stored oi the heap
+		// And the variable d is stored on the stack
 		Driver d = new Driver();
 		
 		// d and the new Driver() are different things
@@ -78,8 +78,8 @@ public class Driver {
 		// It has a value which is the memory location
 		// of the object itself (the new Driver)
 		
-		// The new Driver is an object that is stored on
-		// the stack
+		// The new Driver is an object that is stored in
+		// the heap
 		
 		// What this means, is that when d is no longer
 		// within scope, the new Driver still exists
