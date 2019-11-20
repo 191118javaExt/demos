@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 Matthew Oberlies 
 Steffano Malaga
 Austin Wang
 Enrique Hunt
+=======
+Matthew Oberlies
+>>>>>>> bb461a17ed90fc168f54b6e9204c87e10b764a97
 Matthew Oberlies 2
+Leon Nguyen 
 Elijah Jefferson
 Virtue Winter
 Jonathan Wulf
+Austin Wang
 
