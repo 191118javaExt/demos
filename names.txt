@@ -1,7 +1,3 @@
 Matthew Oberlies
-<<<<<<< HEAD
 Sophia Gavrila
-
-=======
 Matthew Oberlies 2
->>>>>>> 284c27b0f0edb1d9595a9b08da3b618e767c67cd
