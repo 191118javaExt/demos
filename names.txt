@@ -1,4 +1,8 @@
 Jarvis Woodham 1
+Matthew Oberlies 
+Steffano Malaga
+Austin Wang
+Mikkel Fredsti
 Ryan Behlke
 Matthew Oberlies 
 Steffano Malaga
@@ -20,6 +24,7 @@ Leon Nguyen
 Elijah Jefferson
 Virtue Winter
 Jonathan Wulf
+Lawrence Ross
 Ram Krishna Bhattarai
 Austin Wang
 Tenia Scott
