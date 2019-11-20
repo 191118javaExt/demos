@@ -1,4 +1,7 @@
-
+Matthew Oberlies 
+Steffano Malaga
+Austin Wang
+Mikkel Fredsti
 Ryan Behlke
 Matthew Oberlies 
 Steffano Malaga
@@ -7,6 +10,8 @@ Enrique Hunt
 Matthew Oberlies
 lesya
 Matthew Oberlies
+Sophia Gavrila
+Matthew Oberlies 2
 Avril Douglas
 Sophia Gavrila
 Matthew Oberlies 2
@@ -24,6 +29,7 @@ Jonathan Wulf
 Lawrence Ross
 Ram Krishna Bhattarai
 Austin Wang
+Andre Atkins.
 Tenia Scott
 Nico Leung
 Emnet Tesfaye
