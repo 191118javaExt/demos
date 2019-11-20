@@ -1,6 +1,5 @@
 lesya
 Matthew Oberlies
-<<<<<<< HEAD
 Sophia Gavrila
 Matthew Oberlies 2
 Avril Douglas
@@ -19,4 +18,6 @@ Jonathan Wulf
 Ram Krishna Bhattarai
 Austin Wang
 Andre Atkins.
+Nico Leung
 Emnet Tesfaye
+David Chacon
