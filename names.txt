@@ -5,6 +5,7 @@ Matthew Oberlies
 Sophia Gavrila
 >>>>>>> 772e988a79b82327b6424d185610861e56602d19
 Matthew Oberlies 2
+Tim Gattie
 Leon Nguyen 
 Elijah Jefferson
 Virtue Winter
