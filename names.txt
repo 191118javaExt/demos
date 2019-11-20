@@ -1,6 +1,17 @@
+lesya
 Matthew Oberlies
+<<<<<<< HEAD
+=======
+Sophia Gavrila
+>>>>>>> 772e988a79b82327b6424d185610861e56602d19
 Matthew Oberlies 2
+Leon Nguyen 
 Elijah Jefferson
 Virtue Winter
 Jonathan Wulf
+<<<<<<< HEAD
 Lawrence Ross
+=======
+Ram Krishna Bhattarai
+Austin Wang
+>>>>>>> 772e988a79b82327b6424d185610861e56602d19
