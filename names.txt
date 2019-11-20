@@ -1,6 +1,8 @@
 Matthew Oberlies
 Matthew Oberlies 2
+<<<<<<< HEAD
 Tim Gattie
+Leon Nguyen 
 Elijah Jefferson
 Virtue Winter
 Jonathan Wulf
