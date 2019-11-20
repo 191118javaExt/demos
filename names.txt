@@ -1,6 +1,5 @@
 Matthew Oberlies
-<<<<<<< HEAD
-Austin Wang
-=======
 Matthew Oberlies 2
->>>>>>> 284c27b0f0edb1d9595a9b08da3b618e767c67cd
+Matthew Oberlies 
+Steffano Malaga
+Austin Wang
