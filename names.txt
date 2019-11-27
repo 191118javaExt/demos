@@ -1,4 +1,45 @@
+<<<<<<< HEAD
 Matthew Oberlies
+=======
+Jarvis Woodham 1
+Matthew Oberlies 
+Steffano Malaga
+Austin Wang
+Mikkel Fredsti
+Ryan Behlke
+Matthew Oberlies 
+Steffano Malaga
+Austin Wang
+Enrique Hunt
+Matthew Oberlies
+lesya
+Matthew Oberlies
+Sophia Gavrila
 Matthew Oberlies 2
+Avril Douglas
+Sophia Gavrila
+>>>>>>> aae5186b4659ab85aed487e9a1d44bdc07dff382
+Matthew Oberlies 2
+Stefani
+Andrew Miller
+Liam Gonzalez
+Elijah Jefferson
 Virtue Winter
 Jonathan Wulf
+<<<<<<< HEAD
+=======
+Tim Gattie
+Leon Nguyen 
+Elijah Jefferson
+Virtue Winter
+Jonathan Wulf
+Lawrence Ross
+Ram Krishna Bhattarai
+Austin Wang
+Andre Atkins.
+Tenia Scott
+Nico Leung
+Emnet Tesfaye
+David Chacon
+Jonathan Mayanan
+>>>>>>> aae5186b4659ab85aed487e9a1d44bdc07dff382

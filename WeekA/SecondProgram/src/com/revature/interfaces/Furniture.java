@@ -1,0 +1,26 @@
+package com.revature.interfaces;
+
+public abstract class Furniture {
+	public String color;
+	public String texture;
+	public double cost;
+	public String style;
+	
+	public abstract void recline();
+	
+	public abstract void massage();
+	
+	public void adjust(int amount) {
+		if(amount > 0 ) {
+			for(int i = 0; i < amount; i++) {
+				System.out.println("Click");
+			}
+		}
+		else {
+			amount *= -1;
+			for(int i = 0; i < amount; i++) {
+				System.out.println("Click, but down");
+			}
+		}
+	}
+}
