@@ -1,0 +1,48 @@
+2019-12-03 10:46:40 INFO  Driver:10 - PROGRAM START
+2019-12-03 10:46:40 INFO  Driver:14 - PROGRAM END
+2019-12-03 10:58:32 INFO  Driver:10 - PROGRAM START
+2019-12-03 10:58:32 INFO  Driver:14 - PROGRAM END
+2019-12-03 11:10:34 INFO  Driver:10 - PROGRAM START
+2019-12-03 11:10:34 WARN  Driver:16 - WARNING: Division by zero occurred!
+2019-12-03 11:10:34 INFO  Driver:19 - PROGRAM END
+2019-12-03 11:28:11 INFO  Driver:40 - PROGRAM START
+2019-12-03 11:28:11 WARN  Driver:46 - WARNING: Division by zero occurred!
+2019-12-03 11:29:34 FATAL Driver:55 - Oh no! Something is wrong!
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Unknown Source)
+	at java.util.Arrays.copyOf(Unknown Source)
+	at java.util.ArrayList.grow(Unknown Source)
+	at java.util.ArrayList.ensureExplicitCapacity(Unknown Source)
+	at java.util.ArrayList.ensureCapacityInternal(Unknown Source)
+	at java.util.ArrayList.add(Unknown Source)
+	at com.revature.Driver.main(Driver.java:52)
+2019-12-03 11:29:34 INFO  Driver:58 - PROGRAM END
+2019-12-03 11:41:02 INFO  Driver:40 - PROGRAM START
+2019-12-03 11:41:02 WARN  Driver:46 - WARNING: Division by zero occurred!
+java.lang.ArithmeticException: / by zero
+	at com.revature.Driver.main(Driver.java:43)
+2019-12-03 11:42:55 FATAL Driver:55 - Oh no! Something is wrong!
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Unknown Source)
+	at java.util.Arrays.copyOf(Unknown Source)
+	at java.util.ArrayList.grow(Unknown Source)
+	at java.util.ArrayList.ensureExplicitCapacity(Unknown Source)
+	at java.util.ArrayList.ensureCapacityInternal(Unknown Source)
+	at java.util.ArrayList.add(Unknown Source)
+	at com.revature.Driver.main(Driver.java:52)
+2019-12-03 11:42:55 INFO  Driver:58 - PROGRAM END
+2019-12-03 11:45:31 INFO  Driver:40 - PROGRAM START
+2019-12-03 11:45:31 WARN  Driver:46 - WARNING: Division by zero occurred!
+java.lang.ArithmeticException: / by zero
+	at com.revature.Driver.main(Driver.java:43)
+2019-12-03 11:45:31 INFO  Driver:58 - PROGRAM END
+2019-12-03 11:47:23 INFO  Driver:40 - PROGRAM START
+2019-12-03 11:47:23 WARN  Driver:46 - WARNING: Division by zero occurred!
+java.lang.ArithmeticException: / by zero
+	at com.revature.Driver.main(Driver.java:43)
+2019-12-03 11:47:23 INFO  Driver:58 - PROGRAM END
+2019-12-03 11:48:03 INFO  Driver:40 - PROGRAM START
+2019-12-03 11:48:03 WARN  Driver:46 - WARNING: Division by zero occurred!
+java.lang.ArithmeticException: / by zero
+	at com.revature.Driver.main(Driver.java:43)
+2019-12-03 11:48:03 INFO  Driver:58 - PROGRAM END
