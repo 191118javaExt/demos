@@ -1,7 +1,10 @@
 package com.revature;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Driver {
@@ -169,6 +172,12 @@ public class Driver {
 		}
 		
 		try {
+			BufferedReader br = new BufferedReader(new FileReader("src/main/resources/coffee"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		try {
 			throwsUnchecked();
 		} catch(RuntimeException e) {
 			System.out.println("Caught!");
@@ -176,11 +185,48 @@ public class Driver {
 		
 		//throwsUnchecked();
 		
+		/*
+		 * Finally blocks always execute.
+		 * You may have at most 1 finally block, and if you
+		 * do, it must be at the end, or, the code will not compile
+		 */
 		try {
 			throwsChecked();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (IOException e) {
+			
+		} finally {
+			System.out.println("Does this run?");
+		}
+		Scanner s3 = null;
+		try {
+			 s3 = new Scanner(System.in);
+			 int x = 1 / 0;
+		} catch(ArithmeticException e) {
+			
+		} finally {
+			s3.close();
+		}
+		
+//		for(;false;) {
+//		}
+		
+		//while(false) { }
+		
+		System.out.println(finallyfun());
+		
+		// This is called a try-with-resources block
+		// It allows you to declare a resource
+		// that implements the AutoClosable interface
+		// as part of the try block
+		// this resource is available for the try block
+		// and will be automatically closed
+		// at the end
+		try (Scanner s4 = new Scanner(System.in)) {
+			int x = 1 / 0;
+		} catch(ArithmeticException e) {
 		}
 	}
 	
@@ -211,5 +257,17 @@ public class Driver {
 		 * These Compile-time Exceptions would still occur
 		 * at Runtime
 		 */
+	}
+	
+	public static int finallyfun() {
+		try {
+			return 1 / 0;
+		} catch(ArithmeticException e) {
+			return 1;
+		} finally {
+//			int x = 1 / 0;
+//			return -3;
+			System.out.println("In finally.");
+		}
 	}
 }
