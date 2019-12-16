@@ -8,7 +8,15 @@ import com.revature.repositories.EmployeeDAOImpl;
 
 public class EmployeeService {
 	
-	EmployeeDAO repository = new EmployeeDAOImpl();
+	EmployeeDAO repository = null;
+	
+	public EmployeeService() {
+		repository = new EmployeeDAOImpl();
+	}
+	
+	public EmployeeService(EmployeeDAO dao) {
+		repository = dao;
+	}
 
 	/**
 	 * This is a very simple method, that doesn't add in any extra logic
@@ -21,5 +29,14 @@ public class EmployeeService {
 	
 	public boolean insert(Employee e) {
 		return repository.insert(e);
+	}
+	
+	public boolean login(String username, String password) {
+		if(username == "correctUsername") {
+			if(password == "correctPassword") {
+				return true;
+			}
+		}
+		return false;
 	}
 }
