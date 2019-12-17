@@ -132,5 +132,111 @@
     </div>
 
     <img src="rev.png" width="300" height="300"/>
+
+    <h1>HTML Semantic Tags</h1>
+    <!--
+      Semantic tags are tags that are named in a specific way so that
+      they are easier to read by humans. They help discern the intentions
+      of the developer who wrote the html document.
+      Note that they are not different from regular tags, they just
+      aim to more clearly communicate the purpose of the segment of html.
+
+      Examples: header, footer, nav, article, etc.
+    -->
+
+    <header>
+      <h1>I am in a header</h1>
+      <p>Usually, this would be at the top of a webpage.</p>
+    </header>
+
+    <footer>
+      <h2>This is my footer</h2>
+      <p>Usually, this would be at the bottom of a webpage.</p>
+    </footer>
+
+    <!-- Nav is usually used to enclose a section that has links
+      .... You know, like a navbar -->
+
+    <nav>
+      <h1>Navigate to these links if you want!</h1>
+      <a href="https://google.com">Google</a>
+      <a href="https://google.com">Yahoo!</a>
+      <a href="https://google.com">Bing</a>
+      <a href="https://google.com">Search Engine #4</a>
+    </nav>
+    <!-- Attributes -->
+    <!--
+      An attribute is used to define the characteristics of an HTML element.
+        - Attributes are placed within the element's opening tag
+        - All attributes are made up of 2 parts: name and a value
+          - The name is the property that you want to set
+          - The value is what you want the property to be set to
+    -->
+    <p align="left">This paragraph is left aligned</p>
+    <p align="center">This paragraph is center aligned</p>
+    <p align="right">This paragraph is right aligned</p>
+
+    <h3>Title attribute</h3>
+    <!--
+      The title attribute gives a suggested title for the element
+        - The behavior of this attribute will depend upon the element
+          that carries it.
+        - The example below will create an element that will summon a
+          tooltip when the cursors hovers over the element
+    -->
+    <h4 title="This is my first title attribute!">Hover over me!</h4>
+
+    <h3>The ID attribute</h3>
+    <!--
+      The id attribute of an html tag can be used to uniquely identify
+      that tag within an html page.
+      There are 2 main reasons why you would want to use an id:
+        1) If an element carries an id attribute as a unique identifier,
+            it is possible to identify just that element and its content
+            for use in things like JavaScript.
+        2) if you have 2 elements of the same name within a web page, you
+            can distinguish between them
+    -->
+
+    <p id="id1">This paragraph talks about html</p>
+    <p id="id2">This paragraph attempts to talk about css</p>
+
+    <h2>The Style attribute</h2>
+    <!--
+      The style attribute can of course be used to style individual elements
+      in miscellaneous ways. Such as coloring the text, or changing the font
+      and many others.
+    -->
+    <p style="font-family:Arial, Helvetica, sans-serif; color:lightblue">Some text...</p>
+
+    <h2>HTML forms</h2>
+
+    <!--
+      HTML forms
+      Forms can be used when you want to collect information from the site
+      visitor.
+      - A form will take input and then it will post it to a back-end of your
+        application (we'll do this, but not quite today)
+      - Your back-end application will perform some required processing on the
+        data that was passed in based on defined business logic inside the
+        application
+      - Various form elements that are available
+    -->
+
+    <form action=""> <!-- Action describes what you want to do with the form data -->
+      Username:<br>
+      <input type="text" name="username" value="user"/><br>
+      Password:<br>
+      <input type="password" name="password" value="secret"/><br>
+      <input type="radio" name="stuff" value="yes" checked>YES!<br>
+      <input type="radio" name="stuff" value="yes 2">YES 2!<br>
+      <input type="radio" name="notstuff" value="no">no...<br>
+      <input type="radio" name="notstuff" value="maybe">maybe?<br>
+      <input type="checkbox" value="Burger" checked>Burger<br>
+      <input type="checkbox" value="Fries" >Fries<br>
+      <input type="checkbox" value="Soda">Soda<br>
+      <input type="checkbox" value="Hotdog">Hot Dawg<br>
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
