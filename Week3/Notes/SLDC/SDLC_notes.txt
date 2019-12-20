@@ -1,0 +1,114 @@
+==========SDLC============
+- Software Development Life Cycle
+- Process for planning, creating, testing, and displaying an information
+  system.
+
+  A few general steps to the SDLC:
+  1) Requirement Phase: The existing system is evaluated so that it
+    can be determined what the existing flaws are.
+      -> Business Analysts (BAs)
+  2) Analytics Phase: The new system requirements are defined. In particular,
+    deficiencies are addressed with proposal for improvement
+      -> BA + Senior members of the team
+  3) Design Phase: The proposed system is designed. No coding yet.
+    Product features are planned out
+      -> Senior, Junior devs, etc
+  4) Development Phase: Software is built. Code for the product is written
+      -> Senior, Junior devs, etc
+  5) Testing Phase: Software is tested to ensure it functions as intended
+      -> Devs and testers
+  6) Deployment and Maintenence Phase: Product is delivered/deployed to customer.
+    Maintanence is obviously rigorously kept up.
+      -> Operations, but also devs
+
+=======Waterfall Method=========
+- It is a method for following the SDLC
+- Traditional Model
+
+1 ->
+    2 ->
+        3 ->
+            4 ->
+                5 ->
+                    6 ->
+
+- Progress is seen as only moving downwards
+- You can only step down when you finish the current step
+- Best suited for smaller, shorter term projects where requirements
+  do not change.
+- Not as efficient with money compared to other methods
+- Can't go back up the chain, and it is inflexible
+
+=======Agile========
+- Agile is another method that follows that SDLC.
+- An approach to software Development based on iterative
+  development, where requirements and solutions evolve through
+  the collaboration of cross functional teams.
+- Agile is described as a philosophy or a mentality
+  - Agile is not "a thing that you do", but is more of a mindset or an
+    approach to software development
+- There are 4 core values of Agile (From Agile Manifesto)
+  1) Indviduals and interactions over processes and tools
+  2) Working software over comprehensive documentation
+  3) Customer collaboration over contract negotiation
+  4) Responding to change over following a plan
+- Agile methods (often called frameworks) are comprehensive approaches to
+  the phases of the SDLC
+    - "Scrum" is the most common Agile framework
+- Agile practices:
+  - Continuous Integration (CI): The practice of merging multiple
+    developer's code (usually in a repository) frequently. This should
+    happen several times a day. It is meant to prevent large errors
+    from accumlating. Allows for immediate correct of errors while
+    they are still small.
+    - Note that this CAN be automated
+  - Continuous Delivery (CD): Automated the testing of your code
+    so that the code and the release process are available at the
+    "push of a button".
+  - Continuous Deployment (CD): Every change that passes all stages of
+    the product pipeline is released to the customer immediately. There is
+    no "release day". This is valuable because it speeds up the process of
+    getting feedback from the customer.
+
+=====Agile Scrum Methodology==========
+- In a "Scrum" the project is divided into what are called "sprints".
+- A "Sprint" is a specified timeline (Usually 1 - 4 weeks)
+  - Timeline agreed upon during a Sprint planning meeting
+  - User stories are split into different modules during this planning meeting.
+    - A User Story is a requirement
+    - Generally in the form of "A user can ..."
+    - A informal, natural language description of one or more features
+      of a software system. Usually written in the perspective of a user.
+      - "As a user, I can ..."
+  - Epic: A large body of work that can be broken down into user stories.
+
+===Roles===
+- Product Owner: Usually the client and acts as a point of contact from
+  the client side. Prioritize product backlog when the scrum team should
+  finish and release.
+- Scrum master: Facilitator to the scrum development team. Clarifies
+  questions and orginze the team and focuses on the return of investment.
+- Scrum Dev Team: Devs, QA who develop the product
+  - This is also the team that decides effort estimations to complete
+    a product backlog item.
+- Scrum Team: Product Owner + BAs + Devs + QA (recommended size is 5 - 9)
+
+=====Artifacts=====
+- Product Backlog: This is a repository where the items that product
+  owner wants to be accomplished are kept.
+- Sprint Backlog: This is a subset of the product backlog, containing the
+  items that are to be completed during the current sprint.
+- Burndown (Burnup) Chart: A graph that shows how many user stories
+  (story points) are left to implement (have been implemented) for
+  the current sprint.
+
+======Meetings======
+- Sprint Planning Meeting: Plan for what you will accomplish that sprint
+  (can be up to several hours)
+- Daily Standup Meeting: Short meeting (15 minutes) that happens once a day,
+  for the Scrum team. (What did you do yesterday? What will do today?
+  Do you have any blockers?)
+- Sprint Review: This happens at the end of a sprint. You basically showcase the features
+  you accomplished during the sprint and decide if the product is complete.
+- Sprint Retrospective Meeting: The Scrum team meets and talks about what
+  went well and what went wrong (what did you learn).
