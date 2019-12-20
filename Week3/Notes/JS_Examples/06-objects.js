@@ -1,4 +1,5 @@
-let personLiteral = {
+let personLiteral =
+{
   name: 'Ram',
   hairColor: 'Black',
   favoriteFood: 'Rice',

@@ -1,0 +1,18 @@
+Project 1 Required Tools
+Java
+PostgreSQL
+Servlets
+JavaScript
+AJAX
+HTML
+JDBC
+Log4J
+JUnit
+
+OPTIONALLY (hard mode)
+Angular
+
+NOTE: The file upload and the password encryption requirement
+-I will give no hints, I will not teach how to do
+the file upload requirement.
+-I will not troubleshoot this requirement either.

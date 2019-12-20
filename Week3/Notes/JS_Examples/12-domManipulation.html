@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dom Manipulation With JavaScript</title>
+  </head>
+
+  <body>
+    <h1>DOM Manipulation</h1>
+
+    <p>
+      DOM stands for Document Object Model. It is a representation of all
+      of the elements inside of an html document. You can think of it
+      as a family tree of elements. So, The root element is html. And within
+      the html element, we have its children, head and body. Within body, we have
+      an h1 tag as well as this p tag.
+      Each element contains all of that element's lineage so to speak.
+
+      There are various JS functions that you can use in order to affect
+      the DOM.
+      This is called DOM Manipulation.
+
+      There are various ways to get elements:<br><br>
+      -id (using the getElementById function)<br>
+      -name (using the getElementsByName function)<br>
+      -class (using the getElementsByClassName function)<br>
+      -etc (And there are many others)
+    </p>
+
+    <p>Example</p>
+    <p id="id1">This paragraph has an id</p>
+    <script>
+      let p1 = document.getElementById('id1');
+      console.log(p1);
+      p1.innerHTML = "This paragraph has been modified";
+    </script>
+
+    <p class="c1 c2">This paragraph has a class of c1 and c2</p>
+    <script>
+      let p2 = document.getElementsByClassName("c2");
+      console.log(p2);
+      console.log(p2[0]);
+    </script>
+
+    <p name="n1">This has a name of n1</p>
+    <script>
+      let n1 = document.getElementsByName("n1");
+      console.log(n1);
+      console.log(n1[0]);
+    </script>
+
+    <script>
+      p1.innerHTML = "Something else again";
+      p1.style.color = "rebeccapurple";
+      p1.style.backgroundColor = "yellow";
+      p1.style.opacity = "5%";
+
+      p2[0].style.color = "blue";
+    </script>
+
+    <div id="parentDiv">This is a parent div!</div>
+    <script>
+      let childDiv = document.createElement("div");
+      childDiv.innerHTML = "This is CRAZY";
+      childDiv.style.fontSize = "5em";
+      let parentDiv = document.getElementById("parentDiv");
+      childDiv.setAttribute("id", "child");
+      childDiv.id = "child";
+      childDiv.setAttribute("style", "background-color:cyan");
+      parentDiv.appendChild(childDiv);
+      parentDiv.removeChild(childDiv);
+    </script>
+
+    <h2>Events</h2>
+    <p>We can also cause JavaScript to occur based off of events on the
+      webpage.
+    </p>
+    <p>There are many events, and here is a few</p>
+    <ul>
+      <li>onclick</li>
+      <li>onload</li>
+      <li>onmouseover</li>
+      <li>onkeydown</li>
+      <li>There are MANY MANY more!</li>
+    </ul>
+
+    <button id="funcButton" onclick="someFunc()">Click me!</button>
+    <script>
+      function someFunc() {
+        let button = document.getElementById("funcButton");
+        if(button.style.fontWeight === "bold") {
+          button.style.fontWeight = "400";
+          button.innerHTML = "Click me!";
+        } else {
+          button.setAttribute("style", "font-weight: bold");
+          button.innerHTML = "BOLD!";
+        }
+      }
+      /*
+        There are 2 primary ways in which we can create event listeners
+        The above is an example of the first way.
+      */
+    </script>
+
+    <button id="otherButton">Random text</button>
+    <script>
+      let otherButton = document.getElementById("otherButton");
+      otherButton.addEventListener("mouseover", () => {
+        if(otherButton.style.color != "hotpink") {
+          otherButton.style.color = "hotpink";
+        } else {
+          otherButton.style.color = "black";
+        }
+      });
+      /*
+        Syntax for adding an event listener in JS is as follows:
+          elementVariable.addEventListener("eventName", callbackOrAnonymousFunc);
+      */
+    </script>
+  </body>
+</html>
