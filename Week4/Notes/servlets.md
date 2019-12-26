@@ -80,3 +80,22 @@ Why do sessions matter?
 - ServletConfig (interface) provides objects that are used by the Servlet
   containers (aka web container) to pass information to a servlet during
   initialization
+  - getInitParameter()
+  - getServletContext()
+- Serializable interface is a marker interface (an empty interface) that can be
+  implemented in order to allow an object to be "serialized" (to basically save
+  to a file) and "deserialized".
+  - In particular, if our Servlet classes implement Serializable, then we can serialize
+    them to allow the servlet to "survive" restarting the web container.
+- GenericServlet is an abstract class which supports any protocol, HTTP, UDP, TCP, etc
+  - It is not necessarily designed for HTTP
+- HttpServlet abstract class which allows you to create a servlet suitable
+  for handling http requests.
+  - doPOST, doGET, etc
+  - Note, HttpServlet is an abstract class, so it is meant to be extended
+
+## ServletConfig vs ServletContext
+
+- The ServletConfig is unique to each individual servlet
+  - No other servlet can access another's config
+- The ServletContext is shared across all servlets
