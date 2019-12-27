@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Bootstrap 4 Example</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Hello, World!</h1>
+        <p class="lead">Welcome to Bootstrap</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>
+                Styling all your pages with your own CSS seems like a lot of work, especially
+                when you have to think about responsive design and all the different styles
+                you would have to write just to get somethign to look nice. Isn't there an
+                easier way???
+            </p>
+            <p>
+                Yeah! It is called <strong><a href="http://www.getbootstrap.com">Bootstrap</a></strong>!
+                Bootstrap is a <strong>responsive, mobile-first CSS framework</strong> - it is a bunch of
+                pre-written CSS styles (and optional JavaScript) that you can use. No more developing your
+                own CSS from scratch - just use the styling that Bootstrap provides you by default,
+                mainly by including classes on your HTML elements.
+            </p>
+            <p>
+                So, how to get started? There are two main ways:
+            </p>
+            <ol>
+                <li>Use thier CDN (Content Delivery Network). Just inlcude a link tag with the right URL</li>
+                <li>Download Bootstrap yourself and link it locally</li>
+            </ol>
+            <p>
+                Bootstrap is a large framewokr with many ready-to-go components and we won't go through all of
+                them, but the most critical aspects of Bootstrap are
+            </p>
+            <ul>
+                <li>The grid system - within a "container" you can create rows, which each have 12 columns</li>
+                <li>Responsive by default - use different classes to collapse columns on smaller devices</li>
+                <li>Components - headings, lists, tables, forms, dropdown menus, modals and more!</li>
+                <li>Utility Classes - use various utility classes to style elements how you would want them</li>
+                <li>Consistency - every elemetn will look and feel unified in its design</li>
+            </ul>
+            <p>
+                A demo of the Bootstrap grid system is shown below
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" style="background-color: chocolate">
+                <h3>Hello World!</h3>
+            </div>
+            <div class="col-lg-6" style="background-color:cyan">
+                <h3>Hello World!</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" style="background-color:lightcoral">
+                <h3>Hello World!</h3>
+            </div>
+            <div class="col-lg-4" style="background-color:lightskyblue">
+                <h3>Hello World!</h3>
+            </div>
+            <div class="col-lg-4" style="background-color:thistle">
+                <h3>Hello World!</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2" style="background-color:gold">
+                <h3>Hello World!</h3>
+            </div>
+            <div class="col-lg-4" style="background-color:silver">
+                <h3>Hello World!</h3>
+            </div>
+            <div class="col-lg-3" style="background-color:powderblue">
+                <!--crystal-->
+                <h3>Hello World!</h3>
+            </div>
+        </div>
+        <div>
+            <p>
+                here is an example of a bootstrap table
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th>heading 1</th>
+                        <th>heading 2</th>
+                    </tr>
+                    <tr>
+                        <td>data 1</td>
+                        <td>data 2</td>
+                    </tr>
+                    <tr>
+                        <td>data 1</td>
+                        <td>data 2</td>
+                    </tr>
+                    <tr>
+                        <td>data 1</td>
+                        <td>data 2</td>
+                    </tr>
+                </table>
+                <p>here is a simple form</p>
+                <form>
+                    <input type="text" />
+                    <button class="btn btn-info">Click Me</button>
+                </form>
+
+                <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Password:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-warning">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CSS - Cascading Style Sheets</title>
+    <style>
+      body {
+        max-width: 800px;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      div {
+        font-size: xx-large;
+        color: rebeccapurple;
+        background-color: green;
+        width: 50%;
+        margin: auto;
+      }
+
+      #div2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        color: black;
+        background-color: peachpuff;
+        padding-left: 30%;
+        border: 2px solid black;
+      }
+
+      .special {
+        margin-top: 300px;
+        border: 2px dashed rebeccapurple;
+        padding: 1%;
+        border-radius: 20px;
+        line-height: 18px;
+      }
+
+      .special2 {
+        color: orange;
+      }
+    </style>
+
+    <link rel="stylesheet" href="external.css">
+    <!--
+      This is how we declare an external stylesheet.
+      Using the link tag with a rel attribute of "stylesheet"
+      and you link to the location of your css file with all
+      of your declared css rules.
+    -->
+  </head>
+
+  <body id="top">
+    <h1>Intro to CSS</h1>
+    <p>
+      So now we have a good understanding of HTML, but the last page still looked
+      pretty ugly. The browser applies some default styling with certain tags, like
+      holding <code>&lt;strong&gt;</code> tags, but we were still looking at a very
+      basic document - no colors, no other fonts, no spacing, etc. So how do we actually
+      <em>style</em> the page to make it look nicer? We use <strong>CSS</strong>!
+    </p>
+
+    <p>
+      CSS stands for <em>Cascading Style Sheets</em>. It is a way of styling
+      html elements in many different ways. It follows certain rules that we define.
+      There are three ways to include CSS in an html page.
+      <ol>
+        <li>Inline</li>
+        <li>Using internal stylesheets</li>
+        <li>Using external stylesheets</li>
+      </ol>
+
+      What we saw in the previous introToHTML.html file was an example of
+      inline styling.
+
+      It can be performed on any html element with the <code>style</code> attribute.
+      Within the quotations, we define the value of the style using CSS rules. CSS rules
+      are key-value pairs separated by a colon ( : ). There are many CSS rules that you
+      can apply, we will go over a few, but further self-exploration is required.
+      We'll start with the <code style="color:rgb(27, 172, 47)">color</code> rule, which will change text color.
+    </p>
+
+    <span style="color:blueviolet">Some text in a span.</span>
+    <span style="color:blueviolet; background-color:orange;">Some text with an
+      orange background</span>
+
+    <span style="color:white">Here is some white text, you probably cannot read
+      this</span>
+    <span style="color:aquamarine">You can read this.</span>
+
+    <p>Note that CSS rules are separated by semicolons ( ; )</p>
+
+    <h2>Internal Stylesheets</h2>
+
+    <p>We can declare a style tag in the head tag of this html document.
+        It will declare some overall styles for this entire html document.
+    </p>
+
+    <p>If you look above, you'll see in the head of the document, a style tag.
+      This will declare our styling to whatever elements are declared in the style
+      tag. This is called a stylesheet. We use CSS selectors followed by a curly brace
+      with multiple styling rules separated by semicolons. The CSS selector is a name
+      of a tag, for example, the <code>body</code> tag.
+      Note that this will affect ALL elements that are children of that tag as well.
+
+      So the first CSS rule above applied to the body tag restricts the width of the
+      body to only 800 pixels at a maximum and sets the margin to be automatically
+      calculated, which centers the element within it's parent.
+      This is why our page looks like one single column down the middle.
+
+      The final rule specifies the font family as Helvetica, but with multiple provided
+      with a comma. So that if the browser does not support one, it can use the next.
+      Here, we prefer to use Helvetica and will fall back to Arial.
+
+      As we saw earlier, CSS comments use the /* and */ similar to Java's multi-line
+      comments.
+    </p>
+
+    <h2>Selectors</h2>
+      <div>
+        <p>
+          We just saw an example of a simple selector, which is of a tag name.
+          For example, we could select all of our divs. For example, we just
+          changed the text color to rebeccapurple and the background to green,
+          then we set the width to 50% and centered it in the middle of the parent's
+          width.
+        </p>
+      </div>
+
+      <h4>ID and Class Selectors</h4>
+      <div id="div2">
+        <p>
+          We are able to select elements by more than just their tag.
+          We can select elements that have a particular id, or a particular
+          class. We select elements with a particular id using the hashtag #.
+        </p>
+
+        <p class="special special2">This paragraph has a particular class we have named
+          special. We can apply styling to all elements with the "special" class
+          by using a dot.
+        </p>
+      </div>
+
+      <p>
+        Please look into the following:
+        <ol>
+          <strong>
+          <li>CSS Box Model</li>
+          <li>Other Selectors such as Child and Descendant</li>
+          <li>Sibling Selectors</li>
+          <li>Units</li></strong>
+          <li>Psuedo Class and Psuedo Element selectors</li>
+          <li>Combining Selectors and Wildcards</li>
+        </ol>
+      </p>
+  </body>
+</html>

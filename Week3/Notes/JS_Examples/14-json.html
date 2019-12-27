@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    JSON stands for JavaScript Object Notation
+
+    This is the syntax for declaring objects in JavaScript,
+    however it is generic enough to be used elsewhere.
+    As such, it is often used for lightweight data-interchange.
+    JSON is "self-describing" and easy to understand.
+    Generally used to convey information between client and server.
+    syntax:
+    {'name':'Matthew'}
+    JavaScript comes with two functions that are used to interact with
+    JSON
+      1) JSON.parse(): convert JSON string into JS object
+      2) JSON.stringify(): convert a JS object into a JSON string
+  -->
+
+  <p id="demo"></p>
+  <p id="demo2"></p>
+
+  <script>
+    let text = '{"name":"Keith", "age":104, "city":"Montreal"}';
+    let obj = JSON.parse(text);
+    console.log(text);
+    console.log(obj);
+
+    document.getElementById("demo").innerHTML = obj.name + " " + obj.city;
+    document.getElementById("demo2").innerHTML = JSON.stringify(obj);
+  </script>
+</body>
+</html>
