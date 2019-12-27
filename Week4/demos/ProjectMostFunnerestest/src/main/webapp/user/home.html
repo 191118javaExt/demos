@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script>
+  	function logout() {
+  		let xhr = new XMLHttpRequest();
+
+  		xhr.open("POST", "http://localhost:8080/ProjectMostFunnerestest/logout");
+  		xhr.send();
+  		
+  		sessionStorage.removeItem('currentUser');
+		window.location = "http://localhost:8080/ProjectMostFunnerestest/";
+  	}
+  </script>
+  <title>Homepage</title>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1 id="welcome">You are now logged in!</h1>
+    <script>
+		let welcome = document.getElementById('welcome');
+		let userString = sessionStorage.getItem('currentUser');
+		if(userString === null) {
+			window.location = "http://localhost:8080/ProjectMostFunnerestest/";
+		} else {
+			let currentUser = JSON.parse(userString);
+			console.log(currentUser);
+			if(currentUser != null) {
+				welcome.innerHTML = "Welcome " + currentUser.firstName + " "
+					+ currentUser.lastName;
+			}
+		}
+    </script>
+    <button class="btn btn-success" onclick="logout()">LOGOUT</a>
+  </div>
+</body>
+</html>
