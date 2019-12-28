@@ -1,0 +1,8 @@
+@charset "ISO-8859-1";
+
+.displayDiv {
+	margin: 20px;
+	padding: 20px;
+	border: solid black 5px;
+	background-color: #873abc;
+}
