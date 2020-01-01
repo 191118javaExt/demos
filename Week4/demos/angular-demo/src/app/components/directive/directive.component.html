@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Directives!</h1>
+      <pre>
+        As we discussed earlier, directives are a way that can invoke angular
+        functionality from within an html file. Whether this be modfying the DOM,
+        or some other html characteristics, we are using informaiton from
+        the typescript class to modify what is displayed.
+
+        There are two kinds: Structural Directives and Attribute Directives
+
+        Structural Directives are identified by an asterisk (*) before the directive
+
+        These directives modify the DOM in some way.
+
+        *ngIf will display an html element conditionally, based on the value
+        of a typescript variable. If the value is true, the element is displayed.
+
+        *ngFor will repeat an html element for every value in an array.
+        We have seen both of these as examples before.
+      </pre>
+
+      <input type="button" class="btn btn-danger" (click)="toggleView()" value="TOGGLE ngIf">
+      <p *ngIf="transparent">The * on ngIf means that it is a Structural Directive.</p>
+
+
+      <pre>
+        Below, we can interpolate the information from the pokemon objects in the
+        typescript file. Each element in the array, will get it's own p tag.
+        And then we can access the array element with the name listed in the
+        ngFor.
+      </pre>
+      <p *ngFor="let p of pokemons">{{p.name}}</p>
+
+
+
+      <h2>Attribute Directives</h2>
+      <pre>
+        Attribute Directives are directives that do not have the asterisk (*),
+        and they modify some attribute of the html element such as the
+        class or the style.
+      </pre>
+
+      <span [ngStyle]="styleObject">
+        We can change the style of this paragraph by clicking on the button.
+        This utilizes property binding, as well as the ngStyle attribute
+        directive.
+      </span>
+      <input [(ngModel)]="background" type="text" placeholder="Background color">
+      <input [(ngModel)]="text" type="text" placeholder="Text color">
+      <input type="button" class="btn btn-success" value="TOGGLE STYLE"
+        (click)="changeStyle()">
+    </div>
+  </div>
+</div>

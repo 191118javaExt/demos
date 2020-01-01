@@ -1,0 +1,9 @@
+<div>
+  <button class="btn btn-success" (click)="retrieve()">LOAD FIRST</button>
+  <button class="btn btn-success" (click)="retrieveNext()">LOAD NEXT</button>
+  <div *ngFor="let p of allPokes">
+    <p>Name: {{p.name}}</p>
+    <p>URL: <a href="{{p.url}}">{{p.url}}</a></p>
+  </div>
+  <p>{{func(allPokesObs | async)}}</p>
+</div>
