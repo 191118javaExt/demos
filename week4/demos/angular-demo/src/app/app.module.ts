@@ -11,6 +11,7 @@ import { DirectiveComponent } from './components/directive/directive.component';
 import { DisplayComponent } from './components/display/display.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { EmployeePipe } from './pipes/employee.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     DirectiveComponent,
     DisplayComponent,
-    ProfileComponent
+    ProfileComponent,
+    EmployeePipe
   ],
   imports: [
     BrowserModule,
