@@ -1,0 +1,16 @@
+<h1 (mouseover)="func()">Hello there, this is {{title}} using string interpolation</h1>
+<input [value]="title">
+<input [(ngModel)]="element">
+<button type="submit" (click)="func()">Some Text</button>
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of array">
+      <td>{{s}}</td>
+    </tr>
+  </tbody>
+</table>
