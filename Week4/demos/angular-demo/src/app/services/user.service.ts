@@ -20,4 +20,8 @@ export class UserService {
     return this.http.post<User>('http://localhost:8080/ProjectMostFunnerestest/login',
       body);
   }
+
+  logout() {
+    return this.http.post<void>("http://localhost:8080/ProjectMostFunnerestest/logout", {});
+  }
 }

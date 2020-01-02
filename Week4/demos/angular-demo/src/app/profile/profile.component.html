@@ -1,0 +1,6 @@
+<div class="jumbotron">
+  <h1 *ngIf="currentUser">Welcome {{(currentUser.firstName + ' ' + currentUser.lastName) | titlecase }}!</h1>
+
+  <p>Hiredate: {{currentUser.hireDate | date:'full'}}</p>
+  <p>Salary: {{111.339534 | currency:'USD':'symbol':'0.2-4'}}</p>
+  <button class="btn btn-success" (click)="logout()">LOGOUT</button>

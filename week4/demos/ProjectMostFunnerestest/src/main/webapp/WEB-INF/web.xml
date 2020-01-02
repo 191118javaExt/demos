@@ -17,13 +17,27 @@
 	<filter>
 		<filter-name>CORS</filter-name>
 		<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+		<init-param>
+			<param-name>cors.allowed.origins</param-name>
+			<param-value>https://localhost:4200</param-value>
+		</init-param>
 	</filter>
 	<filter-mapping>
 		<filter-name>CORS</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
+	
 	<servlet>
+		<servlet-name>FrontController</servlet-name>
+		<servlet-class>com.revature.web.FrontController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>FrontController</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+<!-- 	<servlet>
 		<description>This is optional</description>
 		<servlet-name>LoginServlet</servlet-name>
 		<servlet-class>com.revature.web.LoginServlet</servlet-class>
@@ -52,5 +66,5 @@
 	<servlet-mapping>
 		<servlet-name>LogoutServlet</servlet-name>
 		<url-pattern>/logout</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 </web-app>

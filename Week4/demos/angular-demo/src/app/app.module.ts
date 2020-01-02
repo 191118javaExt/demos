@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DirectiveComponent } from './components/directive/directive.component';
 import { DisplayComponent } from './components/display/display.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LoginComponent,
     DirectiveComponent,
-    DisplayComponent
+    DisplayComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
