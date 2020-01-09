@@ -21,7 +21,7 @@ public class CrimeDao {
 		
 		ses.save(myVill);
 		tx.commit();
-		ses.close();
+		//ses.close();
 	}
 	
 	public void update(Crimes myVill) {
@@ -30,13 +30,13 @@ public class CrimeDao {
 		
 		ses.update(myVill);
 		tx.commit();
-		ses.close();
+		//ses.close();
 	}
 	
 	public Crimes selectById(int id) {
 		Session ses = HibernateUtil.getSession();
 		Crimes supe = ses.get(Crimes.class, id);
-		ses.close();
+		//ses.close();
 		return supe;
 	}
 	
@@ -69,7 +69,7 @@ public class CrimeDao {
 		 * " name='"+name+"'", Crimes.class).list();
 		 */
 		
-		ses.close();
+		//ses.close();
 		if(villList.size()==0) {
 			System.out.println("PANIC!!!!!");
 			return null;
@@ -82,7 +82,7 @@ public class CrimeDao {
 		Session ses = HibernateUtil.getSession();
 		//This is HQL
 		List<Crimes> villList=ses.createQuery("from Crimes", Crimes.class).list();
-		ses.close();
+		//ses.close();
 		return villList;
 		
 	}

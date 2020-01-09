@@ -40,7 +40,7 @@ public class SuperVillainDao {
 		
 		ses.save(myVill);
 		tx.commit();
-		ses.close();
+		//ses.close();
 	}
 	
 	public void update(SuperVillain myVill) {
@@ -49,13 +49,13 @@ public class SuperVillainDao {
 		
 		ses.update(myVill);
 		tx.commit();
-		ses.close();
+		//ses.close();
 	}
 	
 	public SuperVillain selectById(int id) {
 		Session ses = HibernateUtil.getSession();
 		SuperVillain supe = ses.get(SuperVillain.class, id);
-		ses.close();
+		//ses.close();
 		return supe;
 	}
 	
@@ -88,7 +88,7 @@ public class SuperVillainDao {
 		 * " name='"+name+"'", SuperVillain.class).list();
 		 */
 		
-		ses.close();
+		//ses.close();
 		if(villList.size()==0) {
 			System.out.println("PANIC!!!!!");
 			return null;
@@ -101,7 +101,7 @@ public class SuperVillainDao {
 		Session ses = HibernateUtil.getSession();
 		//This is HQL
 		List<SuperVillain> villList=ses.createQuery("from SuperVillain", SuperVillain.class).list();
-		ses.close();
+		//ses.close();
 		return villList;
 		
 	}

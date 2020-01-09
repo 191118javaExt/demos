@@ -11,7 +11,9 @@ public class HibernateUtil {
 			.buildSessionFactory();
 	
 	public static Session getSession() {
-		ses=sf.openSession();
+		if(ses==null) {
+			ses=sf.openSession();
+		}
 		return ses;
 	}
 	

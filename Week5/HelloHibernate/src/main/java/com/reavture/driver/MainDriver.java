@@ -6,6 +6,7 @@ import java.util.List;
 import com.reavture.model.Crimes;
 import com.reavture.model.SuperPrisons;
 import com.reavture.model.SuperVillain;
+import com.reavture.util.HibernateUtil;
 import com.revature.dao.CrimeDao;
 import com.revature.dao.SuperPrisonDao;
 import com.revature.dao.SuperVillainDao;
@@ -14,6 +15,9 @@ public class MainDriver {
 
 	public static void main(String[] args) {
 		initialValues();
+		SuperPrisonDao spd = new SuperPrisonDao();
+		System.out.println(spd.selectAll());
+		HibernateUtil.closeSes();
 		/*
 		 * System.out.println("Do the things"); SuperVillain vill2= new
 		 * SuperVillain("Rickie", "Mimic", 1_500_000_000);

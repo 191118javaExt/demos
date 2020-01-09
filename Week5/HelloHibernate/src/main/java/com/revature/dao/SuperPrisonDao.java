@@ -19,7 +19,7 @@ public class SuperPrisonDao {
 		ses.save(myPrison);
 		
 		tx.commit();
-		ses.close();
+		//ses.close();
 	}
 	
 	public void update(SuperPrisons myPrison) {
@@ -29,7 +29,7 @@ public class SuperPrisonDao {
 		ses.update(myPrison);
 		
 		tx.commit();
-		ses.close();
+		//ses.close();
 	}
 	
 	public SuperPrisons selectById(int id) {
@@ -37,7 +37,7 @@ public class SuperPrisonDao {
 		
 		SuperPrisons pris = ses.get(SuperPrisons.class, id);
 		
-		ses.close();
+		//ses.close();
 		return pris;
 	}
 	
@@ -46,9 +46,9 @@ public class SuperPrisonDao {
 		
 		//THIS is HQL
 		List<SuperPrisons> prisonList=
-				ses.createQuery("from SuperPrison", SuperPrisons.class).list();
+				ses.createQuery("from SuperPrisons", SuperPrisons.class).list();
 		
-		ses.close();
+		//ses.close();
 		
 		return prisonList;
 	}

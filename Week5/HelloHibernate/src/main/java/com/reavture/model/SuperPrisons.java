@@ -27,7 +27,7 @@ public class SuperPrisons {
 	@Column(name="sp_location")
 	private String location;
 	
-	@OneToMany(mappedBy="superPrisonHolder", fetch=FetchType.EAGER)
+	@OneToMany(mappedBy="superPrisonHolder", fetch=FetchType.LAZY)
 	private List<SuperVillain> villList = new ArrayList<>();
 	
 	

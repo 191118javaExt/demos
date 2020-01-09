@@ -35,10 +35,10 @@ public class SuperVillain {
 	@Column(name="bounty")
 	private int bounty;
 	
-	@ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Crimes> crimes;
 	
-	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="Prison_FK")
 	private SuperPrisons superPrisonHolder;
 
@@ -122,7 +122,7 @@ public class SuperVillain {
 	@Override
 	public String toString() {
 		return "SuperVillain [svillId=" + svillId + ", name=" + name + ", superpower=" + superpower + ", bounty="
-				+ bounty + ", crimes=" + crimes + ", superPrisonHolder=" + superPrisonHolder + "]";
+				+ bounty + ", crimes=" + crimes + ", superPrisonHolder=" + superPrisonHolder.getSpName() + "]";
 	}
 
 
