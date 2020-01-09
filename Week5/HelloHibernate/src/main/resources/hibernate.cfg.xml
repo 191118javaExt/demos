@@ -53,6 +53,8 @@
 		HOW DOES HIBERNATE INTERACT WITH YOUR SCHEMA: ..... QC
 		-->
 		<mapping class="com.reavture.model.SuperVillain"/>
+		<mapping class="com.reavture.model.Crimes"/>
+		<mapping class="com.reavture.model.SuperPrisons"/>
 		
 	</session-factory>
 

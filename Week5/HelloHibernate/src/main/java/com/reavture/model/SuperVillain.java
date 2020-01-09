@@ -1,10 +1,17 @@
 package com.reavture.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /*
@@ -27,6 +34,13 @@ public class SuperVillain {
 	
 	@Column(name="bounty")
 	private int bounty;
+	
+	@ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<Crimes> crimes;
+	
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="Prison_FK")
+	private SuperPrisons superPrisonHolder;
 
 	public SuperVillain() {
 		
@@ -34,22 +48,38 @@ public class SuperVillain {
 	
 	
 	
-	public SuperVillain(int svillId, String name, String superpower, int bounty) {
+	public SuperVillain(int svillId, String name, String superpower, int bounty, List<Crimes> crimes, SuperPrisons sp) {
 		super();
 		this.svillId = svillId;
 		this.name = name;
 		this.superpower = superpower;
 		this.bounty = bounty;
+		this.crimes=crimes;
+		this.superPrisonHolder=sp;
 	}
 
 	
 
 
-	public SuperVillain(String name, String superpower, int bounty) {
+	public SuperVillain(String name, String superpower, int bounty, List<Crimes> crimes,SuperPrisons sp) {
 		super();
 		this.name = name;
 		this.superpower = superpower;
 		this.bounty = bounty;
+		this.crimes=crimes;
+		this.superPrisonHolder=sp;
+	}
+
+
+
+	public SuperPrisons getSuperPrisonHolder() {
+		return superPrisonHolder;
+	}
+
+
+
+	public void setSuperPrisonHolder(SuperPrisons superPrisonHolder) {
+		this.superPrisonHolder = superPrisonHolder;
 	}
 
 
@@ -88,15 +118,30 @@ public class SuperVillain {
 
 
 
+
 	@Override
 	public String toString() {
 		return "SuperVillain [svillId=" + svillId + ", name=" + name + ", superpower=" + superpower + ", bounty="
-				+ bounty + "]";
+				+ bounty + ", crimes=" + crimes + ", superPrisonHolder=" + superPrisonHolder + "]";
 	}
-	
+
+
+
+	public List<Crimes> getCrimes() {
+		return crimes;
+	}
+
+
+
+	public void setCrimes(List<Crimes> crimes) {
+		this.crimes = crimes;
+	}
+
+
+
+}
 	
 	
 	
 	
 
-}
