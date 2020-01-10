@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="com.revature.model">
+	<class name="SuperVillain" table="Super_Villain">
+
+		<meta attribute="description">
+			Describe stuff here or whatever
+		</meta>
+
+		<!-- Primary Key -->
+		<id name="svillId" type="int" column="svill_id">
+			<generator class="native" />
+		</id>
+
+		<property name="name" type="string">
+			<column name="name" not-null="true" unique="true" />
+		</property>
+
+		<property name="superpower" type="string">
+			<column name="superpower"/>
+		</property>
+		<property name="bounty" type="int">
+			<column name="bounty" />
+		</property>
+
+	</class>
+
+</hibernate-mapping>

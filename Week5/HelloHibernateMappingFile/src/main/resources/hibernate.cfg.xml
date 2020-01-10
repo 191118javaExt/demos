@@ -1,0 +1,68 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+        <!--  WHAT IS HIBERNATE?
+        	Hibernate is an ORM and persistence framework
+        	
+        	What's are ORM
+        			Object Relational Mapping. They take objects in programming 
+        			languages and translate them into tables in your database 
+        	What is persistence?
+        		Storing your information/data in a form that is durable (in our DB)
+        	WHAT are some benefits to Hibernate?
+        	
+        	As developers, we no longer have to write complex sql statements
+        	It is object oriented
+        	It's Fast
+        		-It has caching, uses connection pools to minimize bottle necked speed
+        		caused by forming db connections
+        	Its modular, you can write code once and later change the sql 
+        	language by only changing out the driver
+        	-->
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- JDBC Stuff -->
+		<property name="hibernate.connection.username">vill</property>
+		<property name = "hibernate.connection.password">p4ssw0rd</property>
+		<property name = "hibernate.connection.url">jdbc:postgresql://matt-batch-1-6-2020.c3q1kvrmwjgp.us-east-2.rds.amazonaws.com:5432/supervillains</property>
+		<property name ="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name = "hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name = "hibernate.show_sql">false</property>
+		<property name ="hibernate.format_sql">false</property>
+		
+		<!--  COnnection Pool. A method of speeding up database calls. Hibernate will create 10
+		connections to the database when it starts up and every time you create a session, the 
+		session will borrow an active connection from the connection pool. WHen you close a session the
+		connection doesn't close...It is simply freed up for another session to use.
+		This speeds up database interactions. (Default size of the pool is 20)
+		
+		 -->
+		<property name ="hibernate.connection.pool_size">10</property>
+		<property name = "hibernate.hbm2ddl.auto">create</property>
+		<!--  
+		CREATE, VALIDATE, UPDATE, NONE 
+		CREATE drops all existing tables and other object with the names you have provided in the 
+		annotations, then hibernate will create your schema.
+		(NOT PARTICULARLY GREAT FRO PRODUCATION. used for development. 
+		VALIDATE checks to make sure the schema exists as expected.
+		UPDATE hibernate will NOT delete anything, it'll only add to your schema if you need
+		more objects.
+		NONE wel... it means hibernate wont do anything to your schema automatically. 
+		HOW DOES HIBERNATE INTERACT WITH YOUR SCHEMA: ..... QC
+		-->
+		<!-- <mapping class="com.reavture.model.SuperVillain"/>
+		<mapping class="com.reavture.model.Crimes"/>
+		<mapping class="com.reavture.model.SuperPrisons"/> -->
+		
+		<mapping resource="SuperVillain.hbm.xml"/>
+		
+	</session-factory>
+
+</hibernate-configuration>
+        	
+        	
+        	
+        	
+        	
