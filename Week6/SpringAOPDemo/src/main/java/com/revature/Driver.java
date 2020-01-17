@@ -27,6 +27,8 @@ public class Driver {
 		p.setName("Solomon");
 		
 		System.out.println(p);
+		
+		p.hug(2);
 	}
 
 }

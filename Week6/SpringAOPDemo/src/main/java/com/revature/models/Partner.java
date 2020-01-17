@@ -51,6 +51,10 @@ public class Partner implements Serializable {
 	public void setBuddy(Digimon buddy) {
 		this.buddy = buddy;
 	}
+	
+	public void hug(int closeness) {
+		System.out.println(this.buddy.hug(closeness));
+	}
 
 	@Override
 	public int hashCode() {

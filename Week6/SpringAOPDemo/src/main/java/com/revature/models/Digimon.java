@@ -5,6 +5,8 @@ import java.util.Objects;
 
 import org.springframework.stereotype.Component;
 
+import com.revature.exceptions.ExceededBubbleDistanceException;
+
 @Component
 public class Digimon implements Serializable {
 
@@ -57,6 +59,14 @@ public class Digimon implements Serializable {
 
 	public void setEvolutionLevel(String evolutionLevel) {
 		this.evolutionLevel = evolutionLevel;
+	}
+	
+	public String hug(int closeness) {
+		if(closeness > 4) {
+			throw new ExceededBubbleDistanceException();
+		} else {
+			return this.name + " appreciates the hug ... Slightly";
+		}
 	}
 
 	@Override
