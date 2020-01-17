@@ -23,10 +23,9 @@
     	<property name="username" value="postgres"/>
     	<property name="password" value="password"/>
     	<property name="driverClassName" value="org.postgresql.Driver"/>
-    	<property name="hibernate.default_schema" value="ormdemo"/>
     </bean>
     
-    <bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    <bean name="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
     	<property name="dataSource" ref="ourDataSource"/>
     	<property name="packagesToScan" value="com.revature"/>
     	<property name="hibernateProperties">
@@ -34,12 +33,13 @@
     			<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
     			<prop key="show_sql">true</prop>
     			<prop key="hibernate.hbm2ddl.auto">update</prop>
+    			<prop key="hibernate.default_schema">ormdemo</prop>
     		</props>
     	</property>
     </bean>
     
     <bean name="transactionManager" 
-    	class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    	class="org.springframework.orm.hibernate5.HibernateTransactionManager">
     	
     	<property name="sessionFactory" ref="sessionFactory"/>
     	<property name="nestedTransactionAllowed" value="true"/>
