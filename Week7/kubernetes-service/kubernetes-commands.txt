@@ -1,0 +1,13 @@
+kubectl apply -f <deployment-filename>
+kubectl get deployments # to check that it was successful
+kubectl expose deployment <deployment-name> --name=<service-name> --type=<type>
+	# If you're using minikube, you should use NodePort as the type
+	# If you're using a real cluster, you should use LoadBalancer as the type
+kubectl get services # to check services availability (and the external IP)
+	# If you're using minikube with NodePort, you should instead run
+		# minikube service <service-name> --url
+	# This will give you an external ip to use
+	# ignore the "pending" that 'kubectl get services' says
+
+# Remember the syntax for the deployment file, it should be a yaml file
+# Included is the deployment-file example
