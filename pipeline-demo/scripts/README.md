@@ -53,7 +53,7 @@ Note: This name also works for `scp` to make copying files much more convenient.
 At this point jenkins should be available at port 8080
 
 10. copy down the password
-    - `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
+    - `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
 11. Navigate to the EC2's public ip or dns on port 8080 and login with that password
 12. Choose Install Suggested plugins, no other plugins needed
 
