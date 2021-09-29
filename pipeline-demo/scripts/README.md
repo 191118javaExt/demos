@@ -29,32 +29,37 @@ Note: This name also works for `scp` to make copying files much more convenient.
 
 
 ## Get pipeline setup
-Open `git bash` or some other terminal in this folder
+1. Open `git bash` or some other terminal in this folder
 
-`scp *.sh pipeline:~` # Copy script files over, except for the config and the README
-  type yes
-`ssh pipeline`
+2. Copy script files over, except for the config and the README
+    - `scp *.sh pipeline:~`
+    - type `yes`
+3. `ssh pipeline`
+    - Or full ssh command if you did not configure an ssh host
 
-`sudo yum update -y` # Update packages that can be
-(Optional) `sh swapspace.sh` # Create swapspace
-`sh ec2-jenkins-setup.sh` # Install needed packages
-`sudo sh set-env.sh` # Create script that creates/refreshes environment variables
-`source /etc/profile.d/tomcat.sh` # Actually execute the script that was just created
-`sudo sh permissions.sh` # Change folder permissions for Jenkins to access tomcat
+4. Update packages that can be
+    - `sudo yum update -y`
+5. (Optional) Create swapspace
+    - `sh swapspace.sh`
+6. Install needed packages
+    - `sh ec2-jenkins-setup.sh`
+7. Create script that creates/refreshes environment variables
+    - `sudo sh set-env.sh`
+8. Actually execute the script that was just created
+    - `source /etc/profile.d/tomcat.sh`
+9. Change folder permissions for Jenkins to access tomcat
+    - `sudo sh permissions.sh`
 
 At this point jenkins should be available at port 8080
-`sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
-  copy down the password
 
-Navigate to the EC2's public ip or dns on port 8080 and login with that password
+10. copy down the password
+    - `sudo vi /var/lib/jenkins/secrets/initialAdminPassword`
+11. Navigate to the EC2's public ip or dns on port 8080 and login with that password
+12. Choose Install Suggested plugins, no other plugins needed
 
-Choose Install Suggested plugins, no other plugins needed
-
-Can opt to skip creating another user and to just login as admin
-  username: admin
-  password: what you just copied
-
-
+13. You may opt to skip creating another user and to just login as admin
+    - username: admin
+    - password: what you just copied
 
 ## Create Github Repo
 
